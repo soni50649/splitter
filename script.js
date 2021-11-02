@@ -1,10 +1,20 @@
 "use strict"
 
-function split4(){
+function split4(e){
+
+    if(e.shiftKey){
+        this.parentNode.addEventListener("click",split4)
+        this.parentNode.innerHTML=''
+    }
+    else{
+
+    
     addQuarter(this)
     addQuarter(this)
     addQuarter(this)
     addQuarter(this)
+    }
+    e.stopPropagation()
 }
 
 
